@@ -1,0 +1,95 @@
+@use "../css/normalize.css";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #484343d2;
+}
+
+.shape {
+    width: 200px;
+    height: 150px;
+    stroke-width: 5px;
+}
+
+.square {
+    fill: #5402ad;
+    stroke: #1eb963;
+    filter: drop-shadow(0 0 15px #2cc636);
+}
+
+.rectangle {
+    fill: #ff001ee0;
+    stroke: #2b00ffa8;
+    filter: drop-shadow(0 5px 5px #00ffbf);
+}
+
+.circle {
+    fill: #8296ee;
+    stroke: #111836;
+    filter: drop-shadow(0 0 10px #111836);
+}
+
+.ellipse {
+    fill: #2f7e07;
+    stroke: #00fbff;
+    filter: drop-shadow(0 0 10px #00fbff);
+}
+
+.square-animate {
+    animation: rotate 6s 1s infinite;
+}
+
+@keyframes rotate {
+    0% {
+        fill: #4ee40e;
+        stroke: #6405ad;
+        filter: drop-shadow(0 0 15px #cb87ff);
+    }
+
+    60% {
+        fill: #a2a800;
+        stroke: #14ac9d;
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+        fill: #4ee40e;
+        stroke: #6405ad;
+    }
+}
+
+.circle-animate {
+    fill: #5f0683;
+    stroke: #ff3f3f;
+    animation: rotate2 6s 4s infinite;
+}
+
+@keyframes rotate2 {
+    0% {
+        fill: #5f0683;
+        stroke: #ff3f3f;
+        filter: drop-shadow(0 0 15px #ffa8a8);
+    }
+
+    60% {
+        fill: #0097fb;
+        stroke: #45b18d;
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+        fill: #5f0683;
+        stroke: #ff3f3f;
+    }
+}
+
+
